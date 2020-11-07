@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\pictures\download.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Radzen.Blazor" Version="2.16.1" />
     <PackageReference Include="Syncfusion.Blazor" Version="18.3.0.47" />
   </ItemGroup>
