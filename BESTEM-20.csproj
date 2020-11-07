@@ -6,12 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Radzen.Blazor" Version="2.16.1" />
-    <PackageReference Include="Syncfusion.Blazor" Version="18.3.0.47" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\Files\" />
+    <Folder Include="Services\" />
+    <Folder Include="Uploaded Files\" />
   </ItemGroup>
 
 </Project>
