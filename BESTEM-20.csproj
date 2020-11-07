@@ -6,8 +6,20 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
-    <Folder Include="Uploaded Files\" />
+    <Content Remove="Pages\Index - Copy.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\pictures\download.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Radzen.Blazor" Version="2.16.1" />
+    <PackageReference Include="Syncfusion.Blazor" Version="18.3.0.47" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Files\" />
   </ItemGroup>
 
 </Project>
