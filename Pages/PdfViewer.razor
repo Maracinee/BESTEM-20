@@ -1,0 +1,8 @@
+﻿@page "/pdfviewer"
+@using Syncfusion.Blazor.PdfViewerServer 
+<h3>Terms and conditions viewer</h3>
+<p>Here you can see the uploaded pdf file locally stored</p>
+<SfPdfViewerServer DocumentPath="@Path" Height="700px" Width="1060px"></SfPdfViewerServer>
+@code {
+    public string Path { get; set; } = @"C:\Users\tudor\Desktop\BESTEM\BESTEM-20\Uploads\template.pdf";
+}

@@ -8,7 +8,7 @@
     {
         foreach (var file in args.Files)
         {
-            var path = @"path" + file.FileInfo.Name;
+            var path = @"C:\Users\tudor\Desktop\BESTEM\BESTEM-20\Uploads\" + file.FileInfo.Name;
             FileStream filestream = new FileStream(path, FileMode.Create, FileAccess.Write);
             file.Stream.WriteTo(filestream);
             filestream.Close();

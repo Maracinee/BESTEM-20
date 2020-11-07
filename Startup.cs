@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using BESTEM_20.Data;
 using Syncfusion.Blazor;
+using System.Net.Http;
 
 namespace BESTEM_20
 {
@@ -32,11 +33,15 @@ namespace BESTEM_20
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
             services.AddSyncfusionBlazor();
+            services.AddSingleton<HttpClient>();
+            services.AddSyncfusionBlazor();
+            services.AddServerSideBlazor().AddHubOptions(o => { o.MaximumReceiveMessageSize = 102400000; });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MzQ4MDY3QDMxMzgyZTMzMmUzMGIxY0o5OWNkS091SUVNM2kwZXBjZXdubENnV2FKSXUyTGZISW4wY2RlZEE9");
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
