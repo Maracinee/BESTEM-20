@@ -6,21 +6,4 @@ Welcome to your new app.
 <p>First commit - Sebi</p>
 <p>Second commit - Maracine</p>
 <p>Third commit - Dima</p>
-<SfUploader AutoUpload="false">
-    <UploaderEvents ValueChange="OnChange"></UploaderEvents>
-</SfUploader>
 <SurveyPrompt Title="How is Blazor working for you?" />
-
-@code {
-    private void OnChange(UploadChangeEventArgs args)
-    {
-        foreach (var file in args.Files)
-        {
-            var path = @"path" + file.FileInfo.Name;
-            FileStream filestream = new FileStream(path, FileMode.Create, FileAccess.Write);
-            file.Stream.WriteTo(filestream);
-            filestream.Close();
-            file.Stream.Close();
-        }
-    }
-}
