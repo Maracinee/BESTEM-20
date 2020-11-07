@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Pages\Index - Copy.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="wwwroot\pictures\download.png" />
   </ItemGroup>
 
