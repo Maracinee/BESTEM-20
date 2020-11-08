@@ -1,0 +1,16 @@
+﻿@page "/test"
+@using BESTEM_20.Data 
+<h3>Test</h3>
+<input type="text" @bind ="@FileName" />
+<button @onclick="Download" class="btn btn-success">Download</button>
+<textarea class="form-control" rows="5" @bind="@Data" placeholder="Type Here...."></textarea>
+@code {
+    [Inject]
+    private IFileSave oIFileSave { get; set; }
+    private string FileName { get; set; } = "MyCustomText.txt";
+    private string Data { get; set; } = "";
+    private async Task Download()
+    {
+        await oIFileSave.SaveAs(FileName, Data);
+    }
+}

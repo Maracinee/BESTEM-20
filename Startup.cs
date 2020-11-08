@@ -36,6 +36,7 @@ namespace BESTEM_20
             services.AddSingleton<HttpClient>();
             services.AddSyncfusionBlazor();
             services.AddServerSideBlazor().AddHubOptions(o => { o.MaximumReceiveMessageSize = 102400000; });
+            services.AddScoped<IFileSave, FileSave>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
