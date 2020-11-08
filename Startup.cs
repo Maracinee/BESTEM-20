@@ -13,6 +13,7 @@ using Microsoft.Extensions.Hosting;
 using BESTEM_20.Data;
 using Syncfusion.Blazor;
 using System.Net.Http;
+using BlazorStrap;
 
 namespace BESTEM_20
 {
@@ -37,6 +38,7 @@ namespace BESTEM_20
             services.AddSyncfusionBlazor();
             services.AddServerSideBlazor().AddHubOptions(o => { o.MaximumReceiveMessageSize = 102400000; });
             services.AddScoped<IFileSave, FileSave>();
+            services.AddBootstrapCSS();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
